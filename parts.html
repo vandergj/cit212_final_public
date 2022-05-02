@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .wrapper{
+            height: 175%;
+            grid-template-rows: 1fr .75fr .5fr repeat(14, 1fr) .25fr .5fr .75fr;
+        }
+        footer{
+            grid-row: 20/21;
+        }
+        .container{
+            grid-row: 3/20;
+            background-color: #DEB6AB;
+            display: grid;
+            grid-template-rows: .25fr repeat(8, 1fr) .25fr;
+            grid-template-columns: .5fr repeat(2,1fr) .25fr repeat(2,1fr) .5fr;
+            grid-gap: 4px
+        }
+        .cpu{
+            grid-row: 2/3;
+            background-color: #AC7D88;
+        }
+        .cooler{
+            grid-row: 3/4;
+            background-color: #AC7D88;
+        }
+        .mobo{
+            grid-row: 4/5;
+            background-color: #AC7D88;
+        }
+        .ram{
+            grid-row: 5/6;
+            background-color: #AC7D88;
+        }
+        .gpu{
+            grid-row: 6/7;
+            background-color: #AC7D88;
+        }
+        .storage{
+            grid-row: 7/8;
+            background-color: #AC7D88;
+        }
+        .psu{
+            grid-row: 8/9;
+            background-color: #AC7D88;
+        }
+        .case{
+            grid-row: 9/10;
+            background-color: #AC7D88;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        p{
+            font-size: x-small;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <header><h1 class="text">Building your own pc</h1></header>
+    <nav>
+        <a href="index.html" class="text">Home</a>
+        <a href="parts.html" class="text">Parts</a>
+        <a href="assembly.html" class="text">Assembly</a>
+        <a href="example.html" class="text">Example</a>
+    </nav>
+    <div class="container">
+        <!-- cpu -->
+        <h4 class="cpu text" style="grid-column: 2/3;">Cpu</h4>
+        <img class="cpu" style="grid-column: 3/4;" src="https://www.howtogeek.com/wp-content/uploads/2018/10/cpu_lede.png?height=200p&trim=2,2,2,2&crop=16:9">
+        <p class="cpu text" style="grid-column: 5/7;">For lower end builds ($1000 -) your cpu and gpu should be about the same price, but a higher end builds ($1500 +) your cpu should be about half the price of your gpu. Core clocks speed is more important for gaming, while more cores is better for productivity. As of today, the 5600x is best bang for the buck, 12100 is the fastest gaming, and 5950x for productivity. Always compare price between intel and amd, as they are always in close competition.</p>
+        <!-- cooler -->
+        <h4 class="cooler text" style="grid-column: 2/3;">Cpu Cooler</h4>
+        <img class="cooler" style="grid-column: 3/4;" src="https://thermaltake.azureedge.net/pub/media/wysiwyg/key3/img/TOUGHAIR110/pic10m.jpg">
+        <p class="cooler text" style="grid-column: 5/7;">Cpu coolers are important and very tied to which cpu it is paired with. For lower end cpu's downdraft style blowers are still acceptable. For anything i-5, ryzen 5 or above it is recomended to get a tower cooler. And i-7, ryzen 9 and abover are recomended to water cooler their cpu. The cooler will state the tdp it can handle in its spec sheet and you can compare that to the tdp of the cpu it is paired with to see if it will be enough. For overclocking watercooling is always recomended.</p>
+        <!-- mobo -->
+        <h4 class="mobo text" style="grid-column: 2/3;">Motherboard</h4>
+        <img class="mobo" style="grid-column: 3/4;" src="https://m.media-amazon.com/images/I/712eN7mlJwL._AC_SY450_.jpg">
+        <p class="mobo text" style="grid-column: 5/7;">There are so many specs to a motherboard many poeple get overwhelmed. The most important things to look at are the size(atx, micro atx, itx), the i/o(usb ports, audio jacks and other ports), and the chipset(usually a letter than some numbers, B550) The chipset is the best place to start look at the spec sheet of the chipset and find out what you need A/Z are usually high end and B boards are usually good for bang for the buck builds. Check for overclocking support if thats important, and find a motherboard with the features you need but no more. Then filter the boards by chipset and find one with the right i/o and size for your build.</p>
+        <!-- ram -->
+        <h4 class="ram text" style="grid-column: 2/3;">Ram</h4>
+        <img class="ram" style="grid-column: 3/4;" src="https://signal.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/How%20to%20Upgrade%20and%20Install%20RAM%20on%20PC/How_to_upgrade_RAM_memory_in_your_PC-Thumb.jpg">
+        <p class="ram text" style="grid-column: 5/7;">Ram is the most familiar component, but somehow the most confused. Based on your cpu and motherboard pick the right DDR version of ram and then find the standard speed for that DDR version. The most common version right now is DDR4 and its base speed is 2400 but 3200 is the standard speed. Getting the highest speed, the lowerest CL number will optimize performance. Most motherboards are currently dual channel and that is the number of sticks you should get. The amount of storage on the ram is also important, but 16GB is currently good enough for almost everything. Depending on the application it is easy to find out how much ram you actually need with a google search.</p>
+        <!-- gpu -->
+        <h4 class="gpu text" style="grid-column: 2/3;">Gpu</h4>
+        <img class="gpu" style="grid-column: 3/4;" src="https://h7t3n7s7.stackpathcdn.com/wp-content/uploads/2021/08/Graphics-Card-SQ-1024x1024.jpg">
+        <p class="gpu text" style="grid-column: 5/7;">The flashiest part of the pc also happens to be the most expensive, depending on your budget is should be either the equal to or around twice the price of your cpu. Many builds are tending towards being twice as expensive after the gpu shortage in 2020-2022. Nvidia and Amd have made comparing quite easy on consumers. Nvida uses a generation number, and then performance tier number in their naming(3060 3rd gen Rtx and it is middle of the pack 60 tier, 1080 1st gen Rtx and very high performance 80 tier). Amd uses a similar naming scheme (6600 6th gen Radeon 60 tier, 4900 4th gen Radeon 90 tier). Performance tiers between the two companies are similar and the 30 series from nvidia is equal to the 6000 series from amd. For gaming builds your gpu should be under 2/3 your budget but it will usually be quite close.</p>
+        <!-- storage -->
+        <h4 class="storage text" style="grid-column: 2/3;">Storage</h4>
+        <img class="storage" style="grid-column: 3/4;" src="https://m.media-amazon.com/images/I/61-s9hFlMlL._AC_SL1000_.jpg">
+        <p class="storage text" style="grid-column: 5/7;">There are currently two main types of storage HDD, a hard drive that physically spins, and an SSD, stores data entirely with electricity. HDD are generally slower and better for mass storage, while SSDs are faster more reliable, but much more pricy. It is recommended to get an ssd for your operating system and frequently used applications and a HDD for mass storage. A 256-500GB SSD will work just fine, and most people don't need more than 1TB of HDD space</p>
+        <!-- psu -->
+        <h4 class="psu text" style="grid-column: 2/3;">Psu</h4>
+        <img class="psu" style="grid-column: 3/4;" src="https://www.lifewire.com/thmb/ofbMXyiMdHzPUxgXF9g-GR2IaJM=/524x524/smart/filters:no_upscale()/power-supply-5aba984fba617700376b877f.PNG">
+        <p class="psu text" style="grid-column: 5/7;">Do not skimp out on your psu. It is the part where is something goes wrong it can all go wrong. A low quality psu in a power surgue can take out multiple pc components. Psu capaticiy and efficency are the only numbers for a psu's performance. Most high budget builds use 80+ gold effivency psu's while lower end will have at least 80+ bronze.Websites like pc part picker can help you estimate the watage you need your psu to supply. 600w is currently recomended for mid tier builds, while 850w + is required for high end builds.</p>
+        <!-- case -->
+        <h4 class="case text" style="grid-column: 2/3;">Case</h4>
+        <img class="case" style="grid-column: 3/4;" src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-146-322-01.jpg">
+        <p class="case text" style="grid-column: 5/7;">Cases are important for cooling and airflow, but otherwise are entirely cosmetic. As long as your components fit in the case the pc will work, but I recomended finding a case with a mess front as it significantly reduces tempurature of your components and helps them last longer.</p>
+
+    </div>
+    <footer class="text">James Vandergriff 2022</footer>
+    </div>
+</body>
+</html>

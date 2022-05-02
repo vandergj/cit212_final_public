@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .wrapper{
+            height: 120%;
+            grid-template-rows: 1fr .75fr .5fr repeat(10, 1fr) .5fr .75fr;
+        }
+        .container{
+            grid-row: 4/14;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .flip-card {
+            position: relative;
+            left: 50px;
+            background-color: transparent;
+            flex: 0 0 200px;
+            height: 200px;
+            border: 1px solid #f1f1f1;
+            perspective: 1000px;
+            margin: 20px;
+        }
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        .flip-card-back {
+            width: 100%;
+            height: 100%;
+            background-color: #DEB6AB;
+            transform: rotateY(180deg);
+            font-size: .64em;
+            background-color: #AC7D88;
+        }
+        footer{
+            grid-row: 15/16;
+        }
+    </style>
+</head>
+<div class="wrapper">
+    <header><h1 class="text">Building your own pc</h1></header>
+    <nav>
+        <a href="index.html" class="text">Home</a>
+        <a href="parts.html" class="text">Parts</a>
+        <a href="assembly.html" class="text">Assembly</a>
+        <a href="example.html" class="text">Example</a>
+    </nav>
+    <div class="container">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://www.howtogeek.com/wp-content/uploads/2018/10/cpu_lede.png?height=200p&trim=2,2,2,2&crop=16:9" style="width:100%;height:100%;">
+              </div>
+              <div class="flip-card-back">
+                <p class="text">Cpu have pins on the bottom that go into the motherboard, do not touch or bend these. Find the triangles on the cpu, and the triangles on the motherboard. If your motherboard only has one triangle line up the cpu and motherboard triangles. Most motherboards have three triangles, in this case the cpu triangle should be in the corner that doesn't have a triangle on the motherboard.</p>
+              </div>
+            </div>
+          </div>
+        <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+            <img src="https://thermaltake.azureedge.net/pub/media/wysiwyg/key3/img/TOUGHAIR110/pic10m.jpg" style="width:200px;height:200px;">
+            </div>
+            <div class="flip-card-back">
+            <p class="text">To install your cooler there are instruction included and they are important. Every cooler is mounted differently and don't forget to remove the plastic on the bottom of your new cooler.Some coolers come with thermal paste already applied, if not apply a pea sized drop of thermal paste on your cpu before installing.</p>
+            </div>
+        </div>
+        </div>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://m.media-amazon.com/images/I/712eN7mlJwL._AC_SY450_.jpg" style="width:200px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <p class="text">Your motherbord goes straight into your case, but make sure the standoffs are already in the case before mounting your motherboard otherwise your motherboard will get scratched and shorted out. There will be around 9-12 screws depending on your motherboard. You only the outter screws are required but many people put them all in.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://signal.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/How%20to%20Upgrade%20and%20Install%20RAM%20on%20PC/How_to_upgrade_RAM_memory_in_your_PC-Thumb.jpg" style="width:200px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <p class="text">Ram goes into the slots near your cpu. On your motherboard there are instructions as to which slots to fill first. There is a notch on the bottom of your ram that lines up with the notch in the slot, once those are lined up the ram goes in one side at a time. It will take more force than you're expecting and the motherboard might bend a little, but still be careful its easy to break both the ram and the motherboard.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://h7t3n7s7.stackpathcdn.com/wp-content/uploads/2021/08/Graphics-Card-SQ-1024x1024.jpg" style="width:200px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <p class="text">Install your gpu last. To install your gpu the pcie slot covers in on the back of the case need to be taken out of the slots you'll be using. Once those are out the gpu will slide into the slot on the motherboard and the ports will fit into the empty rear slot. The gpu screws into and then is fully installed.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://m.media-amazon.com/images/I/61-s9hFlMlL._AC_SL1000_.jpg" style="width:200px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <p class="text">HDD and SSD are installed differently. Depending on the size of your HDD it can be installed in either a 3.5" or 2.5" slot; it will need sata power lines from the psu, and a sata data line ran to the motherboard. 2.5" SSD are installed the same way as HDD. M.2 SSD are screwed into a slot on your motherboard. Each motherboard will have special instructions for which slot to install the m.2 in and how to install it.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://www.lifewire.com/thmb/ofbMXyiMdHzPUxgXF9g-GR2IaJM=/524x524/smart/filters:no_upscale()/power-supply-5aba984fba617700376b877f.PNG" style="width:200px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <p class="text">The psu generally goes in the bottom of the case, with the fan facing down. The psu goes into through the back of the case, but is screwed in from outside the case. Your switch should be reachable from outside the case.</p>
+              </div>
+            </div>
+          </div>
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-146-322-01.jpg" style="width:200px;height:200px;">
+              </div>
+              <div class="flip-card-back">
+                <p class="text">The case involves a lot of cables. You have cables from fans, psu, and all of your individual componenets. This video from JayzTwoCents is a good guide on cable managment.</p>
+                <br>
+                <a href="https://www.youtube.com/watch?v=c3dggnkaEs8" style="text-decoration: none;">https://www.youtube.com/watch?v=c3dggnkaEs8</a>
+              </div>
+            </div>
+          </div>
+    </div>
+    <footer class="text">James Vandergriff 2022</footer>
+    </div>
+</html>
