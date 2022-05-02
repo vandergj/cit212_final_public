@@ -55,6 +55,89 @@
         footer{
             grid-row: 15/16;
         }
+        @media screen and (min-width: 1440px){
+          .flip-card{
+            flex: 0 0 350px;
+            height: 325px;
+          }  
+          .wrapper{
+            height: 120%;
+            grid-template-rows:1fr .75fr .5fr repeat(9, 1fr) .5fr;
+          }
+          .container{
+              grid-row: 3/13;
+          }
+          footer{
+                grid-row: 13/14;
+          }
+          .flip-card-back{
+            font-size: 1.15em;
+          }
+        }
+        @media screen and (max-width: 850px) {
+          .wrapper{
+            height: auto;
+            display: contents;
+          }
+          header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 70px;
+            width: 100%;
+          }
+          nav{
+            position: absolute;
+            top: 75px;
+            left: 0;
+            height: 50px;
+            width: 100%;
+          }
+          .container{
+            position: absolute;
+            top: 150px;
+            left: 5%;
+            height: auto;
+            width: 90%;
+          }
+          footer{
+            position: absolute;
+            bottom: -300px;
+            width: 100%;
+          }
+        }
+        @media screen and (max-width: 550px){
+          .wrapper{
+            height: auto;
+            display: contents;
+          }
+          header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 70px;
+            width: 100%;
+          }
+          nav{
+            position: absolute;
+            top: 75px;
+            left: 0;
+            height: 50px;
+            width: 100%;
+          }
+          .container{
+            position: absolute;
+            top: 150px;
+            left: 5%;
+            height: auto;
+            width: 90%;
+          }
+          footer{
+            position: absolute;
+            bottom: -172%;
+            width: 100%;
+          }
+        }
     </style>
 </head>
 <div class="wrapper">
@@ -79,7 +162,7 @@
         <div class="flip-card">
         <div class="flip-card-inner">
             <div class="flip-card-front">
-            <img src="https://thermaltake.azureedge.net/pub/media/wysiwyg/key3/img/TOUGHAIR110/pic10m.jpg" style="width:200px;height:200px;">
+            <img src="https://thermaltake.azureedge.net/pub/media/wysiwyg/key3/img/TOUGHAIR110/pic10m.jpg" style="width:100%;height:100%;">
             </div>
             <div class="flip-card-back">
             <p class="text">To install your cooler there are instruction included and they are important. Every cooler is mounted differently and don't forget to remove the plastic on the bottom of your new cooler.Some coolers come with thermal paste already applied, if not apply a pea sized drop of thermal paste on your cpu before installing.</p>
@@ -89,7 +172,7 @@
         <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="https://m.media-amazon.com/images/I/712eN7mlJwL._AC_SY450_.jpg" style="width:200px;height:200px;">
+                <img src="https://m.media-amazon.com/images/I/712eN7mlJwL._AC_SY450_.jpg" style="width:100%;height:100%;">
               </div>
               <div class="flip-card-back">
                 <p class="text">Your motherbord goes straight into your case, but make sure the standoffs are already in the case before mounting your motherboard otherwise your motherboard will get scratched and shorted out. There will be around 9-12 screws depending on your motherboard. You only the outter screws are required but many people put them all in.</p>
@@ -99,7 +182,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="https://signal.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/How%20to%20Upgrade%20and%20Install%20RAM%20on%20PC/How_to_upgrade_RAM_memory_in_your_PC-Thumb.jpg" style="width:200px;height:200px;">
+                <img src="https://signal.avg.com/hubfs/Blog_Content/Avg/Signal/AVG%20Signal%20Images/How%20to%20Upgrade%20and%20Install%20RAM%20on%20PC/How_to_upgrade_RAM_memory_in_your_PC-Thumb.jpg" style="width:100%;height:100%;">
               </div>
               <div class="flip-card-back">
                 <p class="text">Ram goes into the slots near your cpu. On your motherboard there are instructions as to which slots to fill first. There is a notch on the bottom of your ram that lines up with the notch in the slot, once those are lined up the ram goes in one side at a time. It will take more force than you're expecting and the motherboard might bend a little, but still be careful its easy to break both the ram and the motherboard.</p>
@@ -109,7 +192,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="https://h7t3n7s7.stackpathcdn.com/wp-content/uploads/2021/08/Graphics-Card-SQ-1024x1024.jpg" style="width:200px;height:200px;">
+                <img src="https://h7t3n7s7.stackpathcdn.com/wp-content/uploads/2021/08/Graphics-Card-SQ-1024x1024.jpg" style="width:100%;height:100%;">
               </div>
               <div class="flip-card-back">
                 <p class="text">Install your gpu last. To install your gpu the pcie slot covers in on the back of the case need to be taken out of the slots you'll be using. Once those are out the gpu will slide into the slot on the motherboard and the ports will fit into the empty rear slot. The gpu screws into and then is fully installed.</p>
@@ -119,7 +202,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="https://m.media-amazon.com/images/I/61-s9hFlMlL._AC_SL1000_.jpg" style="width:200px;height:200px;">
+                <img src="https://m.media-amazon.com/images/I/61-s9hFlMlL._AC_SL1000_.jpg" style="width:100%;height:100%;">
               </div>
               <div class="flip-card-back">
                 <p class="text">HDD and SSD are installed differently. Depending on the size of your HDD it can be installed in either a 3.5" or 2.5" slot; it will need sata power lines from the psu, and a sata data line ran to the motherboard. 2.5" SSD are installed the same way as HDD. M.2 SSD are screwed into a slot on your motherboard. Each motherboard will have special instructions for which slot to install the m.2 in and how to install it.</p>
@@ -129,7 +212,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="https://www.lifewire.com/thmb/ofbMXyiMdHzPUxgXF9g-GR2IaJM=/524x524/smart/filters:no_upscale()/power-supply-5aba984fba617700376b877f.PNG" style="width:200px;height:200px;">
+                <img src="https://www.lifewire.com/thmb/ofbMXyiMdHzPUxgXF9g-GR2IaJM=/524x524/smart/filters:no_upscale()/power-supply-5aba984fba617700376b877f.PNG" style="width:100%;height:100%;">
               </div>
               <div class="flip-card-back">
                 <p class="text">The psu generally goes in the bottom of the case, with the fan facing down. The psu goes into through the back of the case, but is screwed in from outside the case. Your switch should be reachable from outside the case.</p>
@@ -139,7 +222,7 @@
           <div class="flip-card">
             <div class="flip-card-inner">
               <div class="flip-card-front">
-                <img src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-146-322-01.jpg" style="width:200px;height:200px;">
+                <img src="https://c1.neweggimages.com/ProductImageCompressAll1280/11-146-322-01.jpg" style="width:100%;height:100%;">
               </div>
               <div class="flip-card-back">
                 <p class="text">The case involves a lot of cables. You have cables from fans, psu, and all of your individual componenets. This video from JayzTwoCents is a good guide on cable managment.</p>

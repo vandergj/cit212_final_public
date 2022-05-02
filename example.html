@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            grid-row: 3/13;
+            display: grid;
+            grid-template-columns: .75fr repeat(4,1fr) .25fr 1fr .25fr repeat(4,1fr) .75fr;
+            grid-template-rows: .5fr repeat(4,1fr) .5fr repeat(4,1fr) .5fr .25fr;
+            grid-gap: 5px;
+        }
+        .topLeft{
+            width: 100%;
+            height: 100%;
+            grid-row: 2/6;
+            grid-column: 2/6;
+        }
+        .topRight{
+            width: 100%;
+            height: 100%;
+            grid-row: 2/6;
+            grid-column: 9/13;
+        }
+        .botLeft{
+            width: 100%;
+            height: 100%;
+            grid-row: 7/11;
+            grid-column: 2/6;
+        }
+        .botRight{
+            width: 100%;
+            height: 100%;
+            grid-row: 7/11;
+            grid-column: 9/13;
+        }
+        .a{
+            grid-row: 5/6; grid-column: 7/8;
+        }
+        .b{
+            grid-row: 8/9; grid-column: 7/8;
+        }
+        .c{
+            grid-row: 6/7;grid-column: 3/5;
+        }
+        .d{
+            grid-row: 6/7;grid-column: 10/12;
+        }
+        .e{
+            text-decoration: none;text-align: center;grid-row: 11/12;grid-column: 4/11;
+        }
+        p{
+            text-align: center;
+        }
+        .intel{
+            opacity: 1;
+        }
+        .amd{
+            opacity: 0;
+        }
+        @media screen and (min-width: 1440px){
+           .container{
+               grid-column: 3/8;
+           }   
+        }
+        @media screen and (max-width: 800px) {
+            .wrapper{
+                height: 150%;
+                grid-template-rows: 1fr .75fr .5fr repeat(14, 1fr) .25fr .5fr .75fr;
+            }
+            .container{
+                grid-template-rows: .5fr repeat(12,1fr) .5fr .25fr;
+                grid-template-columns: .75fr repeat(5,1fr) .75fr;
+                grid-row: 4/19;
+            }
+            footer{
+                grid-row: 20/21;
+            }
+            .topLeft{
+                grid-row: 2/5;
+                grid-column: 2/5;
+            }
+            .botLeft{
+                grid-row: 5/8;
+                grid-column: 2/5;
+            }
+            .topRight{
+                grid-row: 8/11;
+                grid-column: 2/5;
+            }
+            .botRight{
+                grid-row: 11/14;
+                grid-column: 2/5;
+            }
+            .a{
+                grid-row: 2/3;
+                grid-column: 6/7;
+            }
+            .b{
+                grid-row: 3/4;
+                grid-column: 6/7;
+            }
+            .c{
+                grid-row: 6/7;
+                grid-column: 5/8;
+            }
+            .d{
+                grid-row: 12/13;
+                grid-column: 5/8;
+            }
+            .e{
+                grid-row: 14/15;
+                grid-column: 3/6;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <header><h1 class="text">Building your own pc</h1></header>
+    <nav>
+        <a href="index.html" class="text">Home</a>
+        <a href="parts.html" class="text">Parts</a>
+        <a href="assembly.html" class="text">Assembly</a>
+        <a href="example.html" class="text">Example</a>
+    </nav>
+    <div class="container">
+        <img class="topLeft intel" src="https://cdna.pcpartpicker.com/static/forever/images/product/c67d8f42c0e57b268f068172e9a3f571.256p.jpg">
+        <img src="https://cdna.pcpartpicker.com/static/forever/images/product/1dd09dfdc581be6224a323d49d714c7f.256p.jpg" class="topLeft amd">
+        <img class="botLeft intel" src="https://cdna.pcpartpicker.com/static/forever/images/product/1ee4eb7d40aaf6bb43c86b4865407c2d.1600.jpg">
+        <img src="https://cdna.pcpartpicker.com/static/forever/images/product/d840392c61d0ca639f108e4ca53d5f6a.256p.jpg" alt="" class="botLeft amd">
+        <button onclick="intel()" class="a">Intel</button>
+        <button onclick="amd()" class="b">Amd</button>
+        <img class="topRight intel" src="https://cdna.pcpartpicker.com/static/forever/images/product/3f7037db801def4db8418df8e7498e6a.256p.jpg">
+        <img src="https://cdna.pcpartpicker.com/static/forever/images/product/1d7073a2deda3bd22963a7e248bbe3e4.256p.jpg" alt="" class="topRight amd">
+        <img class="botRight intel" src="https://cdna.pcpartpicker.com/static/forever/images/product/7188a45df986ca4d216e18e6587168b5.1600.jpg">
+        <img src="https://cdna.pcpartpicker.com/static/forever/images/product/e6446516ac165189f9f086ae54522e77.256p.jpg" alt="" class="botRight amd">
+        <p class="text intel c">Entry Level Build</p>
+        <p class="text intel d">Enthusiast Build</p>
+        <p class="text amd c">Modest Build</p>
+        <p class="text amd d">Glorious Build</p>
+        <a class='e' href="https://pcpartpicker.com/guide/">https://pcpartpicker.com/guide/</a>
+    </div>
+    <footer class="text">James Vandergriff 2022</footer>
+    </div>
+    <script>
+        function intel(){
+            let intel_stuff = document.querySelectorAll('.intel')
+            intel_stuff.forEach(ele =>{
+                ele.style.opacity = 1
+            })
+            let amd_stuff = document.querySelectorAll('.amd')
+            amd_stuff.forEach(ele =>{
+                ele.style.opacity = 0
+            })
+        }
+        function amd(){
+            let amd_stuff = document.querySelectorAll('.amd')
+            amd_stuff.forEach(ele =>{
+                ele.style.opacity = 1
+            })
+            let intel_stuff = document.querySelectorAll('.intel')
+            intel_stuff.forEach(ele =>{
+                ele.style.opacity = 0
+            })
+        }
+
+
+
+    </script>
+</body>
+</html>
